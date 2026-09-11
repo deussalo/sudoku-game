@@ -13,13 +13,13 @@
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="Sudoku home"><span class="brand-mark">9</span><span>GRID//RUN</span></a>
+        <a class="brand" href="#" aria-label="Sudoku home"><span class="brand-mark">9</span><span>Grid//Run</span></a>
         <div class="top-actions"><span class="date-label" id="dateLabel"></span><button class="icon-button" id="newGameTop" aria-label="Start a new run" title="New run">＋</button></div>
       </header>
 
       <section class="hero">
         <div>
-          <p class="eyebrow">SECTOR <span></span> THE ENDLESS RUN</p>
+          <p class="eyebrow">Sector <span></span> The endless run</p>
           <h1>Descend into the <em>grid.</em></h1>
           <p class="subtitle">Solve rooms. Gather relics. See how deep you can go.</p>
         </div>
@@ -37,16 +37,16 @@
 
         <aside class="control-panel">
           <div class="stats-card">
-            <div class="stat"><span class="stat-label">FLOOR</span><strong><span id="floor">1</span><small> / ∞</small></strong></div>
-            <div class="stat"><span class="stat-label">VITALITY</span><strong class="hearts" id="hearts">♥♥♥</strong></div>
-            <div class="stat"><span class="stat-label">COINS</span><strong id="coins">0</strong></div>
-            <div class="stat"><span class="stat-label">TIME</span><strong id="timer">00:00</strong></div>
+            <div class="stat"><span class="stat-label">Floor</span><strong><span id="floor">1</span><small> / ∞</small></strong></div>
+            <div class="stat"><span class="stat-label">Vitality</span><strong class="hearts" id="hearts">♥♥♥</strong></div>
+            <div class="stat"><span class="stat-label">Coins</span><strong id="coins">0</strong></div>
+            <div class="stat"><span class="stat-label">Time</span><strong id="timer">00:00</strong></div>
           </div>
           <div class="run-card"><div><span class="stat-label">RELIC</span><strong id="relicName">Clear Mind</strong></div><span class="relic-icon">◈</span><p id="relicText">First mistake on each floor deals no damage.</p></div>
           <div class="threat"><div><span class="stat-label">GUARDIAN</span><strong id="guardianText">The Blank Page</strong></div><span id="threatCount">0 / 45</span><div class="threat-track"><i id="threatBar"></i></div></div>
-          <div class="section-heading"><span>ROOM TYPE</span><span class="section-line"></span></div>
+          <div class="section-heading"><span>Room type</span><span class="section-line"></span></div>
           <div class="difficulty" role="group" aria-label="Choose room type"><button data-difficulty="easy">Quiet</button><button class="active" data-difficulty="medium">Standard</button><button data-difficulty="hard">Cursed</button></div>
-          <div class="section-heading tools-heading"><span>TOOLS</span><span class="section-line"></span></div>
+          <div class="section-heading tools-heading"><span>Tools</span><span class="section-line"></span></div>
           <div class="tool-row"><button class="tool-button" id="notesToggle" aria-pressed="false"><span class="tool-icon">✎</span><span>Notes</span><kbd>N</kbd></button><button class="tool-button" id="eraseButton"><span class="tool-icon">⌫</span><span>Erase</span><kbd>E</kbd></button></div>
           <button class="hint-button" id="hintButton"><span>✦</span> Get a hint <kbd>H</kbd></button>
           <button class="new-game" id="newGameButton">Abandon run <span>↗</span></button>
@@ -54,10 +54,10 @@
         </aside>
       </section>
 
-      <footer class="footer"><span>One room at a time. Keep your nerve.</span><span class="footer-mark">◒ &nbsp; BEST RUN <b id="bestFloor">1</b></span></footer>
+      <footer class="footer"><span>One room at a time. Keep your nerve.</span><span class="footer-mark">◒ &nbsp; Best run <b id="bestFloor">1</b></span></footer>
     </main>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow" id="modalEyebrow">RUN COMPLETE</p><h2 id="modalTitle">You escaped.</h2><p id="modalCopy">The dungeon yielded to you in <strong id="finalTime">00:00</strong>.</p><div id="boonChoices" class="boon-choices"></div><button class="new-game" id="playAgain">Enter a new run <span>↗</span></button></div></div>
+    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow" id="modalEyebrow">Run complete</p><h2 id="modalTitle">You escaped.</h2><p id="modalCopy">The dungeon yielded to you in <strong id="finalTime">00:00</strong>.</p><div id="boonChoices" class="boon-choices"></div><button class="new-game" id="playAgain">Enter a new run <span>↗</span></button></div></div>
     <script src="app.js"></script>
   </body>
 </html>
