@@ -5,3 +5,4 @@
 .cell.selected{box-shadow:inset 0 0 0 3px var(--orange);animation:selectedPulse 1.25s ease-in-out infinite}@keyframes selectedPulse{0%,100%{box-shadow:inset 0 0 0 3px var(--orange)}50%{box-shadow:inset 0 0 0 5px var(--orange)}}
 .cell.selected{box-shadow:inset 0 0 0 3px var(--orange);animation:none}
 .cell.selected{animation:selectedBackgroundPulse 1.4s ease-in-out infinite}@keyframes selectedBackgroundPulse{0%,100%{background:#4a3930}50%{background:#604437}}
+.board{grid-template-columns:repeat(9,minmax(0,1fr));grid-template-rows:repeat(9,minmax(0,1fr));gap:0;min-width:0;min-height:0}.cell{margin:0!important;min-width:0;min-height:0}.cell:nth-child(3n):not(:nth-child(9n)){border-right:4px solid var(--bg)}.cell:nth-child(n+19):nth-child(-n+27),.cell:nth-child(n+46):nth-child(-n+54){border-bottom:4px solid var(--bg)}
