@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#101417" />
-    <title>Sudoku — Daily Grid</title>
+    <title>Sudoku: The Endless Run</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,15 +13,15 @@
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <a class="brand" href="#" aria-label="Sudoku home"><span class="brand-mark">9</span><span>SUDOKU</span></a>
-        <div class="top-actions"><span class="date-label" id="dateLabel"></span><button class="icon-button" id="newGameTop" aria-label="Start a new game" title="New game">＋</button></div>
+        <a class="brand" href="#" aria-label="Sudoku home"><span class="brand-mark">9</span><span>GRID//RUN</span></a>
+        <div class="top-actions"><span class="date-label" id="dateLabel"></span><button class="icon-button" id="newGameTop" aria-label="Start a new run" title="New run">＋</button></div>
       </header>
 
       <section class="hero">
         <div>
-          <p class="eyebrow">DAILY GRID <span></span> PUZZLE 014</p>
-          <h1>Find your <em>focus.</em></h1>
-          <p class="subtitle">A quiet little challenge for your sharpest thinking.</p>
+          <p class="eyebrow">SECTOR <span></span> THE ENDLESS RUN</p>
+          <h1>Descend into the <em>grid.</em></h1>
+          <p class="subtitle">Solve rooms. Gather relics. See how deep you can go.</p>
         </div>
         <div class="status-pill"><span class="status-dot"></span><span id="statusText">In progress</span></div>
       </section>
@@ -36,23 +36,25 @@
 
         <aside class="control-panel">
           <div class="stats-card">
+            <div class="stat"><span class="stat-label">FLOOR</span><strong><span id="floor">1</span><small> / ∞</small></strong></div>
+            <div class="stat"><span class="stat-label">VITALITY</span><strong class="hearts" id="hearts">♥♥♥</strong></div>
             <div class="stat"><span class="stat-label">TIME</span><strong id="timer">00:00</strong></div>
-            <div class="stat"><span class="stat-label">MISTAKES</span><strong><span id="mistakes">0</span><small> / 3</small></strong></div>
           </div>
-          <div class="section-heading"><span>DIFFICULTY</span><span class="section-line"></span></div>
-          <div class="difficulty" role="group" aria-label="Choose difficulty"><button data-difficulty="easy">Easy</button><button class="active" data-difficulty="medium">Medium</button><button data-difficulty="hard">Hard</button></div>
+          <div class="run-card"><div><span class="stat-label">RELIC</span><strong id="relicName">Clear Mind</strong></div><span class="relic-icon">◈</span><p id="relicText">First mistake on each floor deals no damage.</p></div>
+          <div class="section-heading"><span>ROOM TYPE</span><span class="section-line"></span></div>
+          <div class="difficulty" role="group" aria-label="Choose room type"><button data-difficulty="easy">Quiet</button><button class="active" data-difficulty="medium">Standard</button><button data-difficulty="hard">Cursed</button></div>
           <div class="section-heading tools-heading"><span>TOOLS</span><span class="section-line"></span></div>
           <div class="tool-row"><button class="tool-button" id="notesToggle" aria-pressed="false"><span class="tool-icon">✎</span><span>Notes</span><kbd>N</kbd></button><button class="tool-button" id="eraseButton"><span class="tool-icon">⌫</span><span>Erase</span><kbd>E</kbd></button></div>
           <button class="hint-button" id="hintButton"><span>✦</span> Get a hint <kbd>H</kbd></button>
-          <button class="new-game" id="newGameButton">New puzzle <span>↗</span></button>
-          <p class="tip"><span>✦</span> Tip: fill the empty cells with the numbers 1–9. Each number can appear once in every row, column, and 3×3 box.</p>
+          <button class="new-game" id="newGameButton">Abandon run <span>↗</span></button>
+          <p class="tip"><span>✦</span> Every clear pushes you deeper. Mistakes cost vitality; hints cost a floor reward. Reach floor 5 to escape the dungeon.</p>
         </aside>
       </section>
 
-      <footer class="footer"><span>Take your time. There’s no clock to beat.</span><span class="footer-mark">◒ &nbsp; MADE FOR A MOMENT OF FOCUS</span></footer>
+      <footer class="footer"><span>One room at a time. Keep your nerve.</span><span class="footer-mark">◒ &nbsp; BEST RUN <b id="bestFloor">1</b></span></footer>
     </main>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow">PUZZLE COMPLETE</p><h2>Nicely done.</h2><p>You found your focus in <strong id="finalTime">00:00</strong>.</p><button class="new-game" id="playAgain">Play again <span>↗</span></button></div></div>
+    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow" id="modalEyebrow">RUN COMPLETE</p><h2 id="modalTitle">You escaped.</h2><p id="modalCopy">The dungeon yielded to you in <strong id="finalTime">00:00</strong>.</p><button class="new-game" id="playAgain">Enter a new run <span>↗</span></button></div></div>
     <script src="app.js"></script>
   </body>
 </html>
