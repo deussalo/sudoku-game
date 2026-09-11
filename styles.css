@@ -4,3 +4,4 @@
 .cell.selected{z-index:2;background:#4a3930;color:var(--orange);box-shadow:inset 0 0 0 3px var(--orange),0 0 18px #e88a4a66;animation:selectedPulse 1.25s ease-in-out infinite}@keyframes selectedPulse{0%,100%{box-shadow:inset 0 0 0 3px var(--orange),0 0 12px #e88a4a44}50%{box-shadow:inset 0 0 0 3px var(--orange),0 0 26px #e88a4a99}}
 .cell.selected{box-shadow:inset 0 0 0 3px var(--orange);animation:selectedPulse 1.25s ease-in-out infinite}@keyframes selectedPulse{0%,100%{box-shadow:inset 0 0 0 3px var(--orange)}50%{box-shadow:inset 0 0 0 5px var(--orange)}}
 .cell.selected{box-shadow:inset 0 0 0 3px var(--orange);animation:none}
+.cell.selected{animation:selectedBackgroundPulse 1.4s ease-in-out infinite}@keyframes selectedBackgroundPulse{0%,100%{background:#4a3930}50%{background:#604437}}
