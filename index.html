@@ -31,16 +31,18 @@
           <div class="board-wrap">
             <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
           </div>
-          <div class="board-footer"><span><b class="legend-dot given"></b> Given</span><span><b class="legend-dot pencil"></b> Your numbers</span><span><b class="legend-dot error"></b> Mistake</span></div>
+          <div class="board-footer"><span><b class="legend-dot given"></b> Given</span><span><b class="legend-dot pencil"></b> Your numbers</span><span><b class="legend-dot treasure"></b> Treasure</span><span id="comboText">Combo ×1</span></div>
         </div>
 
         <aside class="control-panel">
           <div class="stats-card">
             <div class="stat"><span class="stat-label">FLOOR</span><strong><span id="floor">1</span><small> / ∞</small></strong></div>
             <div class="stat"><span class="stat-label">VITALITY</span><strong class="hearts" id="hearts">♥♥♥</strong></div>
+            <div class="stat"><span class="stat-label">COINS</span><strong id="coins">0</strong></div>
             <div class="stat"><span class="stat-label">TIME</span><strong id="timer">00:00</strong></div>
           </div>
           <div class="run-card"><div><span class="stat-label">RELIC</span><strong id="relicName">Clear Mind</strong></div><span class="relic-icon">◈</span><p id="relicText">First mistake on each floor deals no damage.</p></div>
+          <div class="threat"><div><span class="stat-label">GUARDIAN</span><strong id="guardianText">The Blank Page</strong></div><span id="threatCount">0 / 45</span><div class="threat-track"><i id="threatBar"></i></div></div>
           <div class="section-heading"><span>ROOM TYPE</span><span class="section-line"></span></div>
           <div class="difficulty" role="group" aria-label="Choose room type"><button data-difficulty="easy">Quiet</button><button class="active" data-difficulty="medium">Standard</button><button data-difficulty="hard">Cursed</button></div>
           <div class="section-heading tools-heading"><span>TOOLS</span><span class="section-line"></span></div>
@@ -54,7 +56,7 @@
       <footer class="footer"><span>One room at a time. Keep your nerve.</span><span class="footer-mark">◒ &nbsp; BEST RUN <b id="bestFloor">1</b></span></footer>
     </main>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow" id="modalEyebrow">RUN COMPLETE</p><h2 id="modalTitle">You escaped.</h2><p id="modalCopy">The dungeon yielded to you in <strong id="finalTime">00:00</strong>.</p><button class="new-game" id="playAgain">Enter a new run <span>↗</span></button></div></div>
+    <div class="modal-backdrop" id="winModal" hidden><div class="modal"><div class="modal-spark">✦</div><p class="eyebrow" id="modalEyebrow">RUN COMPLETE</p><h2 id="modalTitle">You escaped.</h2><p id="modalCopy">The dungeon yielded to you in <strong id="finalTime">00:00</strong>.</p><div id="boonChoices" class="boon-choices"></div><button class="new-game" id="playAgain">Enter a new run <span>↗</span></button></div></div>
     <script src="app.js"></script>
   </body>
 </html>
